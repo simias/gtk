@@ -125,6 +125,8 @@ pub struct GtkColorChooserDialog;
 #[repr(C)]
 pub struct GtkFileChooserDialog;
 #[repr(C)]
+pub struct GtkFileChooserButton;
+#[repr(C)]
 pub struct GtkFileChooser;
 #[repr(C)]
 pub struct GtkNotebook;
@@ -3190,6 +3192,18 @@ extern "C" {
     pub fn gtk_file_chooser_widget_new     (action: enums::FileChooserAction) -> *mut GtkWidget;
 
     //=========================================================================
+    // GtkFileChooserButton                                                  OK
+    //=========================================================================
+    pub fn gtk_file_chooser_button_new(title: *const c_char, action: enums::FileChooserAction) -> *mut GtkWidget;
+    pub fn gtk_file_chooser_button_new_with_dialog(dialog: *mut GtkWidget) -> *mut GtkWidget;
+    pub fn gtk_file_chooser_button_get_title(_self: *mut GtkFileChooserButton) -> *const c_char;
+    pub fn gtk_file_chooser_button_set_title(_self: *mut GtkFileChooserButton, title: *const c_char);
+    pub fn gtk_file_chooser_button_get_width_chars(_self: *mut GtkFileChooserButton) -> c_int;
+    pub fn gtk_file_chooser_button_set_width_chars(_self: *mut GtkFileChooserButton, n_chars: c_int);
+    pub fn gtk_file_chooser_button_get_focus_on_click(_self: *mut GtkFileChooserButton) -> gboolean;
+    pub fn gtk_file_chooser_button_set_focus_on_click(_self: *mut GtkFileChooserButton, focus_on_click: gboolean);
+
+    //=========================================================================
     // GtkColorChooserWidget                                                 OK
     //=========================================================================
     pub fn gtk_color_chooser_widget_new    () -> *mut GtkWidget;
@@ -3392,6 +3406,7 @@ extern "C" {
     pub fn cast_GtkToolItemGroup(widget: *mut GtkWidget) -> *mut GtkToolItemGroup;
     pub fn cast_GtkAppChooserWidget(widget: *mut GtkWidget) -> *mut GtkAppChooserWidget;
     pub fn cast_GtkFileChooserWidget(widget: *mut GtkWidget) -> *mut GtkFileChooserWidget;
+    pub fn cast_GtkFileChooserButton(widget: *mut GtkWidget) -> *mut GtkFileChooserButton;
     pub fn cast_GtkColorChooserWidget(widget: *mut GtkWidget) -> *mut GtkColorChooserWidget;
     pub fn cast_GtkFontChooserWidget(widget: *mut GtkWidget) -> *mut GtkFontChooserWidget;
     pub fn cast_GtkSocket(widget: *mut GtkWidget) -> *mut GtkSocket;

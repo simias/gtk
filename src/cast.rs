@@ -522,6 +522,10 @@ pub fn GTK_FILE_CHOOSER_WIDGET(widget: *mut ffi::GtkWidget) -> *mut ffi::GtkFile
     unsafe { ffi::cast_GtkFileChooserWidget(widget) }
 }
 
+pub fn GTK_FILE_CHOOSER_BUTTON(widget: *mut ffi::GtkWidget) -> *mut ffi::GtkFileChooserButton {
+    unsafe { ffi::cast_GtkFileChooserButton(widget) }
+}
+
 pub fn GTK_COLOR_CHOOSER_WIDGET(widget: *mut ffi::GtkWidget) -> *mut ffi::GtkColorChooserWidget {
     unsafe { ffi::cast_GtkColorChooserWidget(widget) }
 }

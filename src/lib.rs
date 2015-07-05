@@ -174,6 +174,7 @@ pub use self::widgets::{
     SizeGroup,
     AppChooserWidget,
     FileChooserWidget,
+    FileChooserButton,
     ColorChooserWidget,
     FontChooserWidget,
     EventBox

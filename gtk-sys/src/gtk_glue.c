@@ -576,6 +576,10 @@ GtkFileChooserWidget* cast_GtkFileChooserWidget(GtkWidget* widget) {
     return GTK_FILE_CHOOSER_WIDGET(widget);
 }
 
+GtkFileChooserWidget* cast_GtkFileChooserButton(GtkWidget* widget) {
+    return GTK_FILE_CHOOSER_BUTTON(widget);
+}
+
 GtkColorChooserWidget* cast_GtkColorChooserWidget(GtkWidget* widget) {
     return GTK_COLOR_CHOOSER_WIDGET(widget);
 }

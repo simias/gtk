@@ -33,6 +33,11 @@ impl Dialog {
                                 flags))
         }
     }
+
+    #[doc(hidden)]
+    pub fn unwrap_pointer(&self) -> *mut ffi::GtkWidget {
+        self.pointer
+    }
 }
 
 impl_drop!(Dialog);
